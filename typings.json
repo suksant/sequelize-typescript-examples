@@ -1,0 +1,20 @@
+{
+  "ambientDependencies": {
+    "body-parser": "registry:dt/body-parser#0.0.0+20160317120654",
+    "compression": "registry:dt/compression#0.0.0+20160317120654",
+    "cookie-parser": "registry:dt/cookie-parser#1.3.4+20160316155526",
+    "express": "registry:dt/express#4.0.0+20160317120654",
+    "express-serve-static-core": "registry:dt/express-serve-static-core#0.0.0+20160322035842",
+    "express-session": "registry:dt/express-session#0.0.0+20160331200931",
+    "lodash": "registry:dt/lodash#3.10.0+20160330154726",
+    "mime": "registry:dt/mime#0.0.0+20160316155526",
+    "mkdirp": "registry:dt/mkdirp#0.3.0+20160317120654",
+    "morgan": "registry:dt/morgan#1.2.2+20160317120654",
+    "mysql": "registry:dt/mysql#0.0.0+20160316155526",
+    "node": "registry:dt/node#4.0.0+20160330064709",
+    "sequelize": "registry:dt/sequelize#3.4.1+20160317120654",
+    "serve-static": "registry:dt/serve-static#0.0.0+20160317120654",
+    "validator": "registry:dt/validator#4.5.1+20160316155526",
+    "winston": "registry:dt/winston#0.0.0+20160324163241"
+  }
+}

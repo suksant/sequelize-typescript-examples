@@ -1,0 +1,59 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "isolatedModules": false,
+    "jsx": "react",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "declaration": false,
+    "noImplicitAny": false,
+    "noImplicitUseStrict": false,
+    "removeComments": true,
+    "noLib": false,
+    "preserveConstEnums": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "rootDir": "."
+  },
+  "filesGlob": [
+    "**/*.ts",
+    "../../custom-typings/**/*.d.ts",
+    "../../typings/main.d.ts",
+    "../../typings/main/**/*.ts",
+    "!../../typings/browser.d.ts",
+    "!../../typings/browser/**/*.ts"
+  ],
+  "compileOnSave": false,
+  "buildOnSave": false,
+  "atom": {
+    "rewriteTsconfig": true
+  },
+  "files": [
+    "models/index.ts",
+    "models/interfaces/product-interface.ts",
+    "models/product-model.ts",
+    "routers/product-router.ts",
+    "server.ts",
+    "services/product-service.ts",
+    "utils/logger.ts",
+    "../../custom-typings/continuation-local-storage/continuation-local-storage.d.ts",
+    "../../typings/main.d.ts",
+    "../../typings/main/ambient/body-parser/index.d.ts",
+    "../../typings/main/ambient/compression/index.d.ts",
+    "../../typings/main/ambient/cookie-parser/index.d.ts",
+    "../../typings/main/ambient/express-serve-static-core/index.d.ts",
+    "../../typings/main/ambient/express-session/index.d.ts",
+    "../../typings/main/ambient/express/index.d.ts",
+    "../../typings/main/ambient/lodash/index.d.ts",
+    "../../typings/main/ambient/mime/index.d.ts",
+    "../../typings/main/ambient/mkdirp/index.d.ts",
+    "../../typings/main/ambient/morgan/index.d.ts",
+    "../../typings/main/ambient/mysql/index.d.ts",
+    "../../typings/main/ambient/node/index.d.ts",
+    "../../typings/main/ambient/sequelize/index.d.ts",
+    "../../typings/main/ambient/serve-static/index.d.ts",
+    "../../typings/main/ambient/validator/index.d.ts",
+    "../../typings/main/ambient/winston/index.d.ts"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "rules": {
+    "class-name": true,
+    "curly": true,
+    "indent": [true, "spaces"],
+    "max-line-length": [true, 120],
+    "no-console": [true, "log"],
+    "no-require-imports": true,
+    "no-string-literal": false,
+    "no-switch-case-fall-through": true,
+    "no-unreachable": true,
+    "no-unused-variable": true,
+    "quotemark": [true, "double"],
+    "semicolon": true,
+    "triple-equals": [true, "allow-null-check"],
+    "variable-name": [true, "allow-leading-underscore"],
+    "whitespace": [true, "check-branch"]
+  }
+}
