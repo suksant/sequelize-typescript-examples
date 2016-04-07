@@ -5,7 +5,6 @@
   let compression = require("compression");
   let del = require("del");
   let gulp = require("gulp");
-  let merge = require("merge2");
   let plugins = require("gulp-load-plugins")();
   let spawn = require("child_process").spawn;
 
@@ -13,40 +12,30 @@
 
   gulp.task("clean", "Clean the  distribution.", [], clean);
   gulp.task("compile", "Compile typescript files.", ["typings"], compile);
-  gulp.task("start", "Compile the selected example and start the server.", ["compile"], start);
+  gulp.task("start", "Compile the selected example and start the server.", [], start);
   gulp.task("typings", "Install type definitions.", [], typings);
 
-  let tsProject;
-  let tsProjectConfig;
-
-  if (args.example) {
-    tsProject = plugins.typescript.createProject(`./${args.example}/src/tsconfig.json`);
-    tsProjectConfig = plugins.typescript.createProject("./configs/tsconfig.json");
-  }
+  let tsProject = plugins.typescript.createProject("./tsconfig.json");
 
   function compile() {
-    let tsResult = tsProject.src()
-      .pipe(plugins.typescript(tsProject));
-    let tsResultConfig = tsProjectConfig.src()
-      .pipe(plugins.typescript(tsProjectConfig));
-
-    return merge(
-      tsResult.js.pipe(gulp.dest(`./build/${args.example}/build`)),
-      tsResultConfig.js.pipe(gulp.dest(`./build/configs`))
-    );
+    let tsResult = tsProject.src().pipe(plugins.typescript(tsProject), {typescript: require("typescript")});
+    return tsResult.js.pipe(gulp.dest("./build"));
   }
 
   function clean() {
-    del(["./build", "./typings"]);
+    return del(["./build", "./typings"]);
   }
 
   function start() {
-    let options = [`./build/${args.example}/build/server.js`];
-    spawn("node", options, {stdio: "inherit"});
+    if (args.example) {
+      let options = [`./build/${args.example}/src/server.js`];
+      spawn("node", options, {stdio: "inherit"});
+    } else {
+      plugins.util.log(`No example specified. Run: "npm start -- --example=<folder_name>"`);
+    }
   }
 
   function typings() {
-    return gulp.src("./typings.json")
-      .pipe(plugins.typings());
+    return gulp.src("./typings.json").pipe(plugins.typings());
   }
 }());

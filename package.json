@@ -5,7 +5,9 @@
   "author": "Suksant Sae Lor (Hui) <suksant@gmail.com>",
   "scripts": {
     "clean": "gulp clean",
-    "start": "gulp start"
+    "postinstall": "gulp compile",
+    "start": "gulp start",
+    "typings": "gulp typings"
   },
   "dependencies": {
     "body-parser": "^1.15.0",
@@ -23,6 +25,7 @@
     "winston": "^2.2.0"
   },
   "devDependencies": {
+    "chai": "^3.5.0",
     "del": "^2.2.0",
     "gulp": "^3.9.1",
     "gulp-help": "^1.6.1",
@@ -30,7 +33,7 @@
     "gulp-typescript": "^2.12.2",
     "gulp-typings": "^1.3.0",
     "gulp-util": "^3.0.7",
-    "merge2": "^1.0.2",
+    "mocha": "^2.4.5",
     "typescript": "^1.8.9",
     "yargs": "^4.3.2"
   },
