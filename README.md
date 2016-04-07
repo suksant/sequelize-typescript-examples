@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/suksant/sequelize-typescript-examples.svg?branch=master)](https://travis-ci.org/suksant/sequelize-typescript-examples)
+
 # Sequelize TypeScript Examples
 
 This repository demonstrates examples of using Sequelize in TypeScript projects. Although I try to keep the code clean with consistent conventions, it is by no means considered as best practice. The implemented logic focuses around how to enhance the experience of using Sequelize in TypeScript projects.
