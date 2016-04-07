@@ -5,6 +5,7 @@
   "author": "Suksant Sae Lor (Hui) <suksant@gmail.com>",
   "scripts": {
     "clean": "gulp clean",
+    "compile": "gulp compile",
     "postinstall": "gulp compile",
     "start": "gulp start",
     "typings": "gulp typings"

@@ -84,6 +84,8 @@ class Server {
         cluster.on("listening", (worker: Worker, address: ServerAddress) => {
           logger.info(`Worker ${worker.process.pid} connected to port ${address.port}.`);
         });
+      }).catch((error: Error) => {
+        logger.error(error.message);
       });
     } else {
       this._server.listen(3000);
