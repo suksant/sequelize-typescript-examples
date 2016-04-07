@@ -1,0 +1,8 @@
+language: node_js
+node_js:
+  - "stable"
+  - "4"
+services:
+  - mysql
+before_script:
+  - mysql -e "create database sequelize_typescript_examples;"

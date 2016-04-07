@@ -11,9 +11,9 @@ export interface DatabaseConfig {
 }
 
 export const databaseConfig: DatabaseConfig = {
-  username: "<username>",
-  password: "<password>",
-  database: "<db_name>",
+  username: "travis",
+  password: "",
+  database: "sequelize_typescript_examples",
   host: "127.0.0.1",
   port: 3306,
   dialect: "mysql",
