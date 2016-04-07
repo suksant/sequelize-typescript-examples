@@ -27,9 +27,6 @@
   ],
   "compileOnSave": false,
   "buildOnSave": false,
-  "atom": {
-    "rewriteTsconfig": true
-  },
   "files": [
     "configs/configs.ts",
     "configs/database-config.ts",
@@ -60,5 +57,8 @@
     "typings/main/ambient/serve-static/index.d.ts",
     "typings/main/ambient/validator/index.d.ts",
     "typings/main/ambient/winston/index.d.ts"
-  ]
+  ],
+  "atom": {
+    "rewriteTsconfig": true
+  }
 }
