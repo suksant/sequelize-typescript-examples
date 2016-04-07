@@ -32,4 +32,6 @@ If you change the configurations, you will need to run `npm run compile` for it 
 If you want to clean the build, run `npm run clean` or `gulp clean` if you have gulp installed globally.
 
 ## Test
-Currently, there is no test whatsoever. Please feel free to make a PR.
+```
+npm test
+```

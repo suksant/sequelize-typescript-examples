@@ -3,7 +3,7 @@ import {models, sequelize} from "../models/index";
 import {ProductAttributes, ProductInstance} from "../models/interfaces/product-interface";
 import {Transaction} from "sequelize";
 
-class ProductService {
+export class ProductService {
   createProduct(productAttributes: ProductAttributes): Promise<ProductInstance> {
     let promise = new Promise<ProductInstance>((resolve: Function, reject: Function) => {
       sequelize.transaction((t: Transaction) => {
@@ -56,7 +56,7 @@ class ProductService {
     return promise;
   }
 
-  updateProduct(name: string, productAttributes: ProductAttributes): Promise<void> {
+  updateProduct(name: string, productAttributes: any): Promise<void> {
     let promise = new Promise<void>((resolve: Function, reject: Function) => {
       sequelize.transaction((t: Transaction) => {
         return models.Product.update(productAttributes, {where: {name: name}})

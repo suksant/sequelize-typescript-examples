@@ -1,5 +1,3 @@
-import * as path from "path";
-
 export interface LoggingConfig {
   file: {
     level: string,
@@ -21,7 +19,7 @@ export interface LoggingConfig {
 
 export const loggingConfig: LoggingConfig = {
   file: {
-    level: "info",
+    level: "error",
     filename: "sequelize-typescript-example.log",
     handleExceptions: true,
     json: true,
@@ -30,10 +28,10 @@ export const loggingConfig: LoggingConfig = {
     colorize: false
   },
   console: {
-    level: "info",
+    level: "error",
     handleExceptions: true,
     json: false,
     colorize: true
   },
-  directory: path.join(__dirname)
+  directory: __dirname
 };

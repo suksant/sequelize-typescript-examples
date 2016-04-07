@@ -8,7 +8,8 @@
     "compile": "gulp compile",
     "postinstall": "gulp compile",
     "start": "gulp start",
-    "typings": "gulp typings"
+    "typings": "gulp typings",
+    "test": "gulp compile && mocha 'build/*/test/**/*.js'"
   },
   "dependencies": {
     "body-parser": "^1.15.0",

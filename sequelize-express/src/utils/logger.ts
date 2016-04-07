@@ -6,10 +6,10 @@ import {transports, Logger} from "winston";
 import {Request, Response} from "express";
 
 let config = configs.getLoggingConfig();
-config.file.filename = `${path.join(config.directory, "../sequelize-express/build/logs")}/${config.file.filename}`;
+config.file.filename = `${path.join(config.directory, "../sequelize-express/logs")}/${config.file.filename}`;
 
 if (cluster.isMaster) {
-  mkdirp.sync(path.join(config.directory, "../sequelize-express/build/logs"));
+  mkdirp.sync(path.join(config.directory, "../sequelize-express/logs"));
 }
 
 export const logger = new Logger({
